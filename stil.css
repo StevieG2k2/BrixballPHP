@@ -1,0 +1,143 @@
+*{
+	margin:0px;
+	padding:0px;
+	font-family:'PressStart2P';
+}
+p{
+	line-height: 1.2;
+}
+header{
+	grid-area: header;
+	padding: 15px;
+	color:yellow;
+	text-align: center;
+}
+footer{
+	grid-area: footer;
+}
+nav{
+	grid-area: nav;
+}
+nav a{
+	color: black;
+	text-decoration: none;
+	display: block;
+	background-color: blue;
+	padding: 8px;
+	margin: 7px 7px 7px 7px;
+}
+a:hover{
+	color: yellow;
+}
+#main{
+	position: relative;
+	grid-area: main;
+	width: 100%;
+	text-align: center;
+}
+body{
+	background: url('ozadje.jpg') no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-color:#727272;
+}
+
+canvas{
+	background-color:rgba(100,100,100,0.5);
+}
+@font-face{
+	font-family:'PressStart2P';
+	src:url('PressStart2P-Regular.ttf');
+}
+#stats{
+	grid-area: stats;
+	background: url('stajl.png');
+	background-size: 200px 60px;
+	background-color:#D2D201;
+	padding: 10px;
+	align-self: flex-start;
+}
+
+#startPrompt{
+	line-height: 1.1;
+	color: yellow;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+#finalscore{
+	color: #D2D201;
+	line-height: 1.1;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+#replay{
+	visibility: hidden;
+	position: absolute;
+	color: #D2D201;
+	padding: 5px;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+#replay:hover{
+	background-color: #D2D201;
+	color: black;
+}
+#mozak{
+	visibility: hidden;
+	position: absolute;
+	color: #D2D201;
+	top: 35%;
+	left: 50%;
+	width: 400px;
+	height: 100px;
+	transform: translate(-50%, -50%);
+}
+#ime{
+	height: 25px;
+}
+
+
+
+.book{
+	font: 20px bold white;
+}
+
+@media screen and (min-width: 1233px){
+	body{
+		display: grid;
+		grid-template-columns: 13% 74% 13%;
+		grid-template-rows: 60px 600px 50px;
+		grid-template-areas: 
+		'header header header'
+		'nav main stats'
+		'footer footer footer';
+	}
+}
+  
+@media screen and (max-width: 1233px){
+	body{
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: 60px 95px 50px 600px 50px;
+		grid-template-areas: 
+		'header'
+		'nav'
+		'stats'
+		'main'
+		'footer';
+	}
+	nav a{
+		display: inline;
+		float: left;
+	}
+	canvas{
+		margin-top: 1%;
+	}
+}

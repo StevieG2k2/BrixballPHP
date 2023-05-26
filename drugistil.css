@@ -1,0 +1,178 @@
+*{
+	margin:0px;
+	padding:0px;
+	font-family:'PressStart2P';
+}
+p{
+	line-height: 1.5;
+}
+a{
+	text-decoration: none;
+    color: black;
+}
+header{
+	grid-area: header;
+	padding: 15px;
+	color:yellow;
+	text-align: center;
+}
+footer{
+	grid-area: footer;
+}
+nav{
+	grid-area: nav;
+}
+nav a{
+	color: black;
+	display: block;
+	background-color: blue;
+	padding: 8px;
+	margin: 7px 7px 7px 7px;
+}
+#main{
+	position: relative;
+	grid-area: main;
+	width: 100%;
+	text-align: center;
+}
+body{
+	background: url('ozadje.jpg') no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-color:#727272;
+}
+
+
+@font-face{
+	font-family:'PressStart2P';
+	src:url('PressStart2P-Regular.ttf');
+}
+
+#rekordi{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	padding: 10px;
+    background-color: #D2D201;
+	width: 55%;
+	margin-left: 50%;
+	transform: translate(-50%);
+	padding: 5px 10px 10px 10px;
+}
+#rekordi tr td{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+#tockeout{
+	text-align: right;
+	padding-right: 10px;
+}
+#stolpc{
+    padding-left: 5px;
+}
+#template{
+    visibility: hidden;
+}
+#stolpc th{	
+	border-bottom: 2px solid black;
+	border-collapse: collapse;
+}
+th{
+	font-weight: bold;
+}
+
+.tekst{
+	padding-top: 10px;
+}
+.tekst a{
+	padding: 5px;
+}
+a:hover{
+	color: yellow;
+}
+.tekst a:hover{
+	background-color: yellow;
+}
+
+#delit{
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	color: #D2D201;
+}
+#del{
+	padding: 5px;
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+}
+#del:hover{
+	background-color: #D2D201;
+	color: black;
+	cursor: pointer;
+}
+#conf{
+	visibility: hidden;
+    height: 45px;
+	color: #D2D201;
+}
+#da{
+	float: left;
+	width: 50%;
+}
+#da b:hover{
+	background-color: #D2D201;
+	color: black;
+	cursor: pointer;
+    padding: 5px;
+}
+#ne{
+	float: right;
+	width: 50%;
+}
+#ne b:hover{
+	background-color: #D2D201;
+	color: black;
+	cursor: pointer;
+    padding: 3px;
+}
+
+#back{
+	width: 50%;
+	margin-left: 50%;
+	transform: translate(-50%);
+	padding: 5px 10px 10px 10px;
+    background-color: #D2D201;
+}
+
+
+@media screen and (min-width: 1233px){
+	body{
+		display: grid;
+		grid-template-columns: 13% 74% 13%;
+		grid-template-rows: 60px 600px 50px;
+		grid-template-areas: 
+		'header header header'
+		'nav main stats'
+		'footer footer footer';
+	}
+}
+  
+@media screen and (max-width: 1233px){
+	body{
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: 60px 95px 600px 50px;
+		grid-template-areas: 
+		'header'
+		'nav'
+		'main'
+		'footer';
+	}
+	nav a{
+		display: inline;
+		float: left;
+	}
+}
